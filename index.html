@@ -1,67 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Name | Portfolio</title>
   <style>
     :root {
-      --accent: #6366f1;
-      --bg-gradient: linear-gradient(135deg, #eef2ff, #f9fafb);
-      --text-color: #1f2937;
-    }
-
-    * {
-      box-sizing: border-box;
+      --background: #f8f8f6;
+      --primary: #2f3e46;
+      --accent: #c7a008;
+      --text: #2b2b2b;
+      --muted: #6c757d;
     }
 
     body {
       margin: 0;
-      font-family: "Inter", Arial, sans-serif;
-      background: var(--bg-gradient);
-      color: var(--text-color);
+      font-family: "Poppins", "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--background);
+      color: var(--text);
       line-height: 1.6;
+      scroll-behavior: smooth;
     }
 
     header {
       text-align: center;
       padding: 4rem 1rem 3rem;
-      background: white;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      border-bottom: 1px solid #e5e7eb;
+      background-color: white;
+      border-bottom: 1px solid #e0e0e0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
     }
 
     header h1 {
       font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-      color: var(--accent);
+      color: var(--primary);
+      margin-bottom: 0.3rem;
     }
 
     header p {
+      color: var(--muted);
       font-size: 1.1rem;
-      color: #4b5563;
+    }
+
+    nav {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--primary);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent);
     }
 
     main {
       max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem 5rem;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
     }
 
     section {
-      background: white;
-      border-radius: 12px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      margin-bottom: 3rem;
     }
 
-    section h2 {
-      color: var(--accent);
-      margin-top: 0;
-      border-bottom: 2px solid var(--accent);
-      display: inline-block;
-      padding-bottom: 0.25rem;
+    h2 {
+      color: var(--primary);
+      border-left: 4px solid var(--accent);
+      padding-left: 0.6rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .timeline {
+      border-left: 2px solid var(--accent);
+      padding-left: 1rem;
+    }
+
+    .timeline-item {
+      margin-bottom: 1.2rem;
+    }
+
+    .timeline-item h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      color: var(--primary);
+    }
+
+    .timeline-item span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .projects .project {
+      margin-bottom: 1.2rem;
+    }
+
+    .project h3 {
+      color: var(--primary);
+      margin: 0 0 0.3rem;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .skill {
+      background: var(--primary);
+      color: white;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: var(--muted);
     }
 
     a {
@@ -73,94 +136,94 @@
       text-decoration: underline;
     }
 
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    ul li {
-      margin-bottom: 0.5rem;
-    }
-
-    .project {
-      margin-bottom: 1rem;
-    }
-
-    .project-title {
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      color: #6b7280;
-    }
-
-    /* Simple responsiveness */
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      section {
-        padding: 1.5rem;
-      }
+      header h1 { font-size: 2rem; }
+      nav a { display: inline-block; margin: 0.5rem; }
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Your Name</h1>
-    <p>Frontend Developer · Designer · Creator</p>
+    <p>Designer · Developer · Thinker</p>
   </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <main>
     <section id="about">
-      <h2>About Me</h2>
-      <p>Hello! I’m <strong>Your Name</strong>, a web developer who loves creating clean, modern, and user-friendly websites. I enjoy blending code and design to craft engaging digital experiences. When I’m not coding, you’ll find me sketching ideas or exploring design trends.</p>
+      <h2>About</h2>
+      <p>I’m a multidisciplinary professional who enjoys bridging the gap between design and technology. My work combines aesthetics, usability, and precision. With a passion for detail and clarity, I strive to create work that feels effortless yet meaningful.</p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience & Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>UX Designer — Studio Evolve</h3>
+          <span>2023 – Present</span>
+          <p>Leading design systems and crafting interfaces that empower product growth.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Web Developer — Freelance</h3>
+          <span>2021 – 2023</span>
+          <p>Developed responsive websites and prototypes for startups and local businesses.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>B.A. in Communication Design — Milan Polytechnic</h3>
+          <span>2018 – 2021</span>
+        </div>
+      </div>
     </section>
 
     <section id="projects">
-      <h2>Projects</h2>
-
-      <div class="project">
-        <div class="project-title">Portfolio Website</div>
-        <p>A personal website showcasing my work and skills. Built with HTML, CSS, and love.</p>
-        <a href="#">View Project →</a>
-      </div>
-
-      <div class="project">
-        <div class="project-title">Weather App</div>
-        <p>A simple weather dashboard that fetches real-time data using a public API.</p>
-        <a href="#">View Project →</a>
-      </div>
-
-      <div class="project">
-        <div class="project-title">Landing Page Design</div>
-        <p>A minimalist landing page designed for a local startup using Figma and CSS grid.</p>
-        <a href="#">View Project →</a>
+      <h2>Selected Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <h3>Portfolio Website</h3>
+          <p>Personal site showcasing design and development work.</p>
+          <a href="#">View Project →</a>
+        </div>
+        <div class="project">
+          <h3>Minimal UI Kit</h3>
+          <p>A reusable design system built for consistency across products.</p>
+          <a href="#">View Project →</a>
+        </div>
       </div>
     </section>
 
     <section id="skills">
       <h2>Skills</h2>
-      <p>HTML · CSS · JavaScript · Git · Figma · Responsive Design</p>
+      <div class="skills-list">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Figma</div>
+        <div class="skill">Git</div>
+        <div class="skill">UX Design</div>
+      </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
       <p>📧 <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-      <p>🔗 <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-      <p>💼 <a href="#">linkedin.com/in/yourusername</a></p>
+      <p>🔗 <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+      <p>💼 <a href="https://github.com/egultan" target="_blank">github.com/egultan</a></p>
     </section>
   </main>
 
   <footer>
-    © <span id="year"></span> Your Name — Built with ❤️ using GitHub Pages
+    © <span id="year"></span> Your Name — All Rights Reserved
   </footer>
 
   <script>
-    // Auto-update footer year
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
